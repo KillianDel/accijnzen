@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -22,6 +23,9 @@ use App\Http\Controllers\Auth\PasswordController;
 
 Route::get('/', [PagesController::class, 'index'])->name('index');
 
+
+Route::get('/nieuws', [NewsController::class, 'index'])->name('news');
+
 # FORMS
 Route::get('/contact', [ContactController::class, 'get'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.post');
@@ -38,6 +42,15 @@ Route::middleware('auth')->group(function () {
     # Profiel bewerken
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    //NEWS
+    Route::get('/dashboard/news', [NewsController::class, 'get'])->name('news.get');
+    Route::post('/dashboard/news', [NewsController::class, 'store'])->name('news.store');
+    Route::get('/dashboard/news/edit/{id}', [NewsController::class, 'edit'])->name('news.edit');
+    Route::post('/dashboard/news/update/{id}', [NewsController::class, 'update'])->name('news.update');
+    Route::get('/dashboard/news/editfoto/{id}', [NewsController::class, 'editfoto'])->name('news.editphoto');
+    Route::post('/dashboard/news/updatefoto/{id}', [NewsController::class, 'updatefoto'])->name('news.updatefoto');
+    Route::post('/dashboard/news/delete/{id}', [NewsController::class, 'destroy'])->name('news.delete');
 
     #AUTH
     Route::put('password', [PasswordController::class, 'update'])->name('password.update');

@@ -23,7 +23,7 @@
               <a class="nav-link {{ request()->is('cursussen') ? 'active' : '' }}" href="">Cursussen</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link {{ request()->is('nieuws') ? 'active' : '' }}" href="">Nieuws</a>
+              <a class="nav-link {{ request()->is('nieuws') ? 'active' : '' }}" href="{{ route('news') }}">Nieuws</a>
             </li>
             <li class="nav-item">
               <a class="nav-link {{ request()->is('over-mij') ? 'active' : '' }}" href="">Over mij</a>
@@ -37,18 +37,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         </div>
-          
-        <div class="pos-f-t">
-          <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-dark p-4">
-              <li><a class="dropdown-item" href="{{route('dashboard')}}">Adminmenu</a></li>
-                <li><a class="dropdown-item" href="{{route('profile.edit')}}">Mijn profiel</a></li>
-                <li><a class="dropdown-item" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Uitloggen</a></li>
-                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                  @csrf
-                </form>
-            </div>
-          </div>
+        @if (Auth::check())
             <li class="nav-item dropdown" style="list-style-type: none;">
               <a class="nav-link dropdown-toggle navbar-brand"  data-bs-toggle="dropdown" aria-expanded="false" role="button"  href="#">
                 <img src="{{ asset('media/profiel.png') }}" alt="Verbroedering" width="60" height="60">
@@ -63,6 +52,7 @@
                 </form>
               </ul>
             </li>
+        @endif
       </div>
     </nav>
   </header>

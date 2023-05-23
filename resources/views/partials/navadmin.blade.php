@@ -1,7 +1,7 @@
 <header>
 
   <nav class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0">
-    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><img src="{{ asset('media/logo.png') }}" alt="Accijnzen" width="110" height="50"></a>
+    <a class="navbar-brand col-sm-3 col-md-2 mr-0" href="#"><img src="{{ asset('media/logo.png') }}" alt="Accijnzen" width="70" height="70"></a>
     <ul class="navbar-nav px-3">
       <li class="nav-item text-nowrap">
         <a class="nav-link px-3" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">Uitloggen</a>
@@ -33,6 +33,11 @@
                 <li class="nav-item">
                   <a href="#" class="nav-link align-middle px-0">
                       <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Cursussen</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('news.get') }}" class="nav-link align-middle px-0">
+                      <i class="fs-4 bi-house"></i> <span class="ms-1 d-none d-sm-inline">Nieuws</span>
                   </a>
                 </li>
                 <li class="nav-item">
