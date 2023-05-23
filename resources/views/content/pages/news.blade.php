@@ -33,19 +33,5 @@
       </div>
     </div>
 </div>
-{{-- <div class="bg-light my-2 mx-2">
-    <div class="position-relative overflow-hidden p-md-5 m-md-3 bg-light">
-            <div class="card ">
-                <img class="card-img-top" src=""  width="1200" height="500">
-                <div class="card-body">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <p class="card-text"><small class="text-muted"></small></p>
-                </div>
-            </div>
-        
 
-    </div>
-
-</div> --}}
 @endsection
