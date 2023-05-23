@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('heading')
 <link href="{{ asset('css/news.css') }}" rel="stylesheet">
+<title>Accijnzen - News</title>
 @endsection
 
 @section('content')
@@ -33,5 +34,4 @@
       </div>
     </div>
 </div>
-
 @endsection

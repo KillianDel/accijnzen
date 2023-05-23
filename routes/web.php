@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
+use App\Http\Controllers\CursusController;
 use App\Http\Controllers\NewsController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,8 @@ Route::get('/', [PagesController::class, 'index'])->name('index');
 
 
 Route::get('/nieuws', [NewsController::class, 'index'])->name('news');
+Route::get('/cursussen', [CursusController::class, 'index'])->name('cursussen');
+Route::get('/cursussen/{id}', [CursusController::class, 'showcursus'])->name('cursus.showmore');
 
 # FORMS
 Route::get('/contact', [ContactController::class, 'get'])->name('contact');
@@ -51,6 +54,15 @@ Route::middleware('auth')->group(function () {
     Route::get('/dashboard/news/editfoto/{id}', [NewsController::class, 'editfoto'])->name('news.editphoto');
     Route::post('/dashboard/news/updatefoto/{id}', [NewsController::class, 'updatefoto'])->name('news.updatefoto');
     Route::post('/dashboard/news/delete/{id}', [NewsController::class, 'destroy'])->name('news.delete');
+
+    //Cursussen
+    Route::get('/dashboard/cursussen', [CursusController::class, 'get'])->name('cursus.get');
+    Route::post('/dashboard/cursussen', [CursusController::class, 'store'])->name('cursus.store');
+    Route::get('/dashboard/cursussen/edit/{id}', [CursusController::class, 'edit'])->name('cursus.edit');
+    Route::post('/dashboard/cursussen/update/{id}', [CursusController::class, 'update'])->name('cursus.update');
+    Route::get('/dashboard/cursussen/editfoto/{id}', [CursusController::class, 'editfoto'])->name('cursus.editphoto');
+    Route::post('/dashboard/cursussen/updatefoto/{id}', [CursusController::class, 'updatefoto'])->name('cursus.updatefoto');
+    Route::post('/dashboard/cursussen/delete/{id}', [CursusController::class, 'destroy'])->name('cursus.delete');
 
     #AUTH
     Route::put('password', [PasswordController::class, 'update'])->name('password.update');
