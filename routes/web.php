@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\PagesController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -17,14 +19,18 @@ use App\Http\Controllers\Auth\PasswordController;
 |
 */
 
-Route::get('/', function () {
-    return view('content.index');
-});
+
+Route::get('/', [PagesController::class, 'index'])->name('index');
+
+# FORMS
+Route::get('/contact', [ContactController::class, 'get'])->name('contact');
+Route::post('/contact', [ContactController::class, 'store'])->name('contact.post');
 
 Route::get('/dashboard', function () {
     return view('content.admin.dashboard');
 })->middleware(['auth'])->name('dashboard');
 
+# AUTH
 Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
