@@ -28,7 +28,7 @@ class NewsController extends Controller
         $request->validate([
             'titel' => 'required|max:100',
             'content' => 'required',
-            'cover_image' => 'required|mimes:jpg,png,jpeg|max:5048'
+            'cover_image' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
         ]);
         $cover_image = $request->file('cover_image');
         $titel = $request->input('titel');
@@ -37,7 +37,7 @@ class NewsController extends Controller
         $cover_image->move(public_path('media/nieuwsberichten'), $niewsNaampje);
         $news = News::create([
             'titel' => $titel,
-            'content' => $request->input('content'),
+            'content' => nl2br($request->input('content')),
             'cover_image' => $niewsNaampje,
         ]);
         return redirect('/dashboard/news');
@@ -67,7 +67,7 @@ class NewsController extends Controller
         ]);
         $news = News::where('id', $id)->update([
             'titel' => $request->input('titel'),
-            'content' => $request->input('content'),
+            'content' => nl2br($request->input('content')),
         ]);
         return redirect('/dashboard/news');
         
@@ -75,7 +75,7 @@ class NewsController extends Controller
     public function updatefoto(Request $request, $id)
     {
         $request->validate([
-            'cover_image' => 'required|mimes:jpg,png,jpeg|max:5048|dimensions:max_width=2000,max_height=1100'
+            'cover_image' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
         ]);
         $prev_post = News::where('id', $id)->first();
         $prev_pic = $prev_post->cover_image;
@@ -90,7 +90,7 @@ class NewsController extends Controller
 
         $news = News::where('id', $id)->update([
             'titel' => $titel,
-            'content' => $content,
+            'content' => nl2br($content),
             'cover_image' => $picture_name,
         ]);
         return redirect('/dashboard/news');
