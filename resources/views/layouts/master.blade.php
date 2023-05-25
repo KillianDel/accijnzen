@@ -4,7 +4,13 @@
     <meta charset="utf-8" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     @yield('heading')
-    <link rel="shortcut icon" type="image/jpg" href="{{ URL('media/favicon.png') }}"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ URL('favicons/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ URL('favicons/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ URL('favicons/favicon-16x16.png')}}">
+    <link rel="manifest" href="{{ URL('favicons/site.webmanifest')}}">
+    <link rel="mask-icon" href="{{ URL('favicons/safari-pinned-tab.svg')}}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="{{ asset('css/master.css') }}" rel="stylesheet">
