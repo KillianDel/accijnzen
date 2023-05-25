@@ -31,7 +31,7 @@ class CursusController extends Controller
             'description' => 'required|max:500',
             'price' => 'required',
             'priority' => 'required|integer',
-            'photo' => 'required|mimes:jpg,png,jpeg|max:5048'
+            'photo' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
         ]);
         $photo = $request->file('photo');
         $name = $request->input('name');
@@ -40,8 +40,8 @@ class CursusController extends Controller
         $photo->move(public_path('media/cursussen'), $niewsNaampje);
         $cursus = Cursus::create([
             'name' => $name,
-            'subject' => $request->input('subject'),
-            'description' => $request->input('description'),
+            'subject' => nl2br($request->input('subject')),
+            'description' => nl2br($request->input('description')),
             'price' => $request->input('price'),
             'priority' => $request->input('priority'),
             'photo' => $niewsNaampje,
@@ -84,8 +84,8 @@ class CursusController extends Controller
         ]);
         $cursus = Cursus::where('id', $id)->update([
             'name' => $request->input('name'),
-            'subject' => $request->input('subject'),
-            'description' => $request->input('description'),
+            'subject' => nl2br($request->input('subject')),
+            'description' => nl2br($request->input('description')),
             'price' => $request->input('price'),
             'priority' => $request->input('priority'),
         ]);
@@ -95,7 +95,7 @@ class CursusController extends Controller
     public function updatefoto(Request $request, $id)
     {
         $request->validate([
-            'photo' => 'required|mimes:jpg,png,jpeg|max:5048|dimensions:max_width=2000,max_height=1100'
+            'photo' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
         ]);
         $prev_curs = Cursus::where('id', $id)->first();
         $prev_pic = $prev_curs->photo;
@@ -108,8 +108,8 @@ class CursusController extends Controller
 
         $cursus = Cursus::where('id', $id)->update([
             'name' => $prev_curs->name,
-            'subject' => $prev_curs->subject,
-            'description' => $prev_curs->description,
+            'subject' => nl2br($prev_curs->subject),
+            'description' => nl2br($prev_curs->description),
             'price' => $prev_curs->price,
             'priority' => $prev_curs->priority,
             'photo' => $niewsNaampje,

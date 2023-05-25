@@ -29,8 +29,8 @@
       @foreach ($cursus as $curs)
         <tr>
           <td>{{ $curs->name }}</td>
-          <td>{{ $curs->subject }}</td>
-          <td>{{ $curs->description }}</td>
+          <td>{!! nl2br(e($curs->subject)) !!}</td>
+          <td>{!! nl2br(e($curs->description)) !!}</td>
           <td>€{{ $curs->price }}</td>
           <td>{{ $curs->priority }}</td>
           <td>
@@ -124,7 +124,7 @@
               </div>
             </div>
             <div class="form-group row">
-              <label for="photo" class="col-sm-2 col-form-label">Foto (max: 2000x1100)</label>
+              <label for="photo" class="col-sm-2 col-form-label">Foto (max: 2048x2048)</label>
               <div class="col-sm-10">
                 <input type="file"  @error('photo') is-invalid @enderror name="photo" id="photo" required>
                 @error('photo')

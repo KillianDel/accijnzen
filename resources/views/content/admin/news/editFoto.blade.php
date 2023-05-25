@@ -14,7 +14,7 @@
     <form action="{{ route('news.updatefoto', $news->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
-            <label for="cover_image" class="col-sm-2 col-form-label">Foto (max: 2000x1100)</label>
+            <label for="cover_image" class="col-sm-2 col-form-label">Foto (max: 2048x2048)</label>
             <div class="col-sm-10">
                 <input type="file"  @error('cover_image') is-invalid @enderror name="cover_image" id="cover_image" required>
                 @error('cover_image')

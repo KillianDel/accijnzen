@@ -35,12 +35,12 @@
                             <p class="h3 py-2">€{{ $cursus->price }}</p>
                             <ul class="list-inline">
                                 <li class="list-inline-item">
-                                    <p>{{ $cursus->subject }}</p>
+                                    <p>{!! nl2br(e($cursus->subject)) !!}</p>
                                 </li>
                             </ul>
 
                             <h6>Meer info:</h6>
-                            <p>{{ $cursus->description }}</p>
+                            <p>{!! nl2br(e($cursus->description)) !!}</p>
                             <a href="{{ route('contact') }}" class="btn btn-dark text-white float-right">Contacteer me</a>
                         </div>
                     </div>

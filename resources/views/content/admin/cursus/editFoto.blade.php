@@ -14,7 +14,7 @@
     <form action="{{ route('cursus.updatefoto', $cursus->id) }}" method="POST" enctype="multipart/form-data">
         @csrf
         <div class="form-group row">
-            <label for="photo" class="col-sm-2 col-form-label">Foto (max: 2000x1100)</label>
+            <label for="photo" class="col-sm-2 col-form-label">Foto (max: 2048x2048)</label>
             <div class="col-sm-10">
                 <input type="file"  @error('photo') is-invalid @enderror name="photo" id="photo" required>
                 @error('photo')

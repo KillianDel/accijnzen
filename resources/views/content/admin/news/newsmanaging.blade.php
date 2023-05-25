@@ -26,7 +26,7 @@
       @foreach ($news as $new)
         <tr>
           <td>{{ $new->titel }}</td>
-          <td>{{ $new->content }}</td>
+          <td>{!! nl2br(e($new->content)) !!}</td>
           <td>
             <div class="btn-group">
               <form action="{{ route('news.edit',$new->id) }}" method="post">
@@ -85,7 +85,7 @@
               </div>
             </div>
             <div class="form-group row">
-              <label for="cover_image" class="col-sm-2 col-form-label">Coverfoto (optioneel) (max: 2000x1100)</label>
+              <label for="cover_image" class="col-sm-2 col-form-label">Coverfoto (max: 2048x2048)</label>
               <div class="col-sm-10">
                 <input type="file"  @error('cover_image') is-invalid @enderror name="cover_image" id="cover_image">
                 @error('cover_image')
