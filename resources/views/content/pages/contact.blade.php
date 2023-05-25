@@ -38,12 +38,19 @@
                 @endif
             </div>
             <div class="form-group col-12">
-                <label for="subject" class="form-label">Onderwerp</label>
-                <input type="text" id="subject" class="form-control border border-dark" name="subject"> 
+                <label class="control-label" for="service_status">Onderwerp</label>
+                    <select id="subject" name="subject" class="form-control">
+                    <option selected>Maak uw keuze</option>
+                @foreach ($cursus as $curs)
+                    <option value="{{ $curs->name }}">{{ $curs->name }}</option>
+                @endforeach 
+                    <option value="andere">Andere</option>
+                 </select>
                 @if ($errors->has('subject'))
                     <span class="text-danger">{{ $errors->first('subject') }}</span>
                 @endif
             </div>
+                
             <div class="form-group form-floating col-12">
                 <label for="message" class="form-label">Bericht</label>
                 <textarea  id="message" class="form-control border border-dark" id="floatingTextarea2" name="message" cols="30" rows="5"></textarea> 

@@ -12,7 +12,7 @@ class Contact extends Model
     use HasFactory;
     protected $table = 'contact';
     protected $primaryKey = 'id';
-    public $fillable = ['name', 'email', 'subject', 'message'];
+    public $fillable = ['name', 'email', 'subject', 'message', 'treated'];
   
     /**
      * Write code on Method
