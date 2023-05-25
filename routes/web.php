@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CursusController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
@@ -33,15 +34,18 @@ Route::get('/cursussen/{id}', [CursusController::class, 'showcursus'])->name('cu
 Route::get('/contact', [ContactController::class, 'get'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.post');
 
-Route::get('/dashboard', function () {
-    return view('content.admin.dashboard');
-})->middleware(['auth'])->name('dashboard');
-
 # AUTH
 Route::get('login', [AuthenticatedSessionController::class, 'create'])->name('login');
 Route::post('login', [AuthenticatedSessionController::class, 'store']);
 
 Route::middleware('auth')->group(function () {
+    Route::get('/dashboard', [DashboardController::class, 'get'])->name('dashboard');
+    
+    Route::get('/dashboard/contact', [ContactController::class, 'dashboard'])->name('contact.dash');
+    Route::put('/dashboard/contact/{id}', [ContactController::class, 'treated'])->name('contact.treated');
+    
+
+
     # Profiel bewerken
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
