@@ -17,9 +17,8 @@
     </div>
 </div>
 
-<!-- FORM-->
 
-<div class="bg-dark p-md-5 row featurette px-5 py-5 mx-2 my-2 no-gutters rounded text-white">
+<div class="bg-dark p-md-5 row featurette px-5 py-5 mx-2 mb-2 no-gutters rounded text-white">
     <div data-aos="zoom-in" class="col-md-6 offset-md-3">
         <form action="{{ route('contact.post') }}" method="POST" id="my-form" class="row g-3">
             @csrf  
@@ -69,6 +68,23 @@
         </form>
     </div>
 </div>
+
+<div class="position-relative overflow-hidden p-1 p-md-5 text-center mb-2 mx-2 text-white" style="background-color: #815194">
+    <div class="row align-items-start featurette" data-aos="flip-up">
+        <div class="col-md-7 d-flex flex-column justify-content-center">
+            <h2 class="featurette-heading font-weight-bold pt-4">Over mij</h2>
+            <br><br>
+            <p class="lead">Lange tekst</p>
+        </div>
+        <div class="col-md-5">
+            <div class="d-flex justify-content-center align-items-start h-100">
+                <img class="featurette-image img-fluid mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Icon_Bird_512x512.png" alt="accijnzen news">
+            </div>
+        </div>
+    </div>
+</div>
+
+
 
 </div>
 @endsection

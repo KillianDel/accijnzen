@@ -1,31 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <title>Login</title>
+</head>
+<body>
+    <div class="limiter">
+    <div class="container-login100">
+        <div class="wrap-login100">
+            <form class="login100-form validate-form" method="POST" action="{{ route('login') }}">
+                @csrf
+                <span class="login100-form-title p-b-26">
+                    Welkom
+                </span>
+                <span class="login100-form-title p-b-48">
+                    <i class="zmdi zmdi-font"></i>
+                </span>
 
-<form method="POST" action="{{ route('login') }}">
-    @csrf
-    <!-- Email Address -->
-    <div>
-        <label for="email" :value="__('Email')">Email</label>
-        <input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus autocomplete="username" />
-        {{-- <x-input-error :messages="$errors->get('email')" class="mt-2" /> --}}
-    </div>
+                <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
+                    <input :value="old('email')" class="input100" type="text" name="email">
+                    <span class="focus-input100" data-placeholder="Email" id="email" type="email" name="email" required autofocus autocomplete="username"></span>
+                </div>
 
-    <!-- Password -->
-    <div class="mt-4">
-        <label for="password" :value="__('Password')">Wachtwoord</label>
-        <input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="current-password" />
-        {{-- <x-input-error :messages="$errors->get('password')" class="mt-2" /> --}}
-    </div>
+                <div class="wrap-input100 validate-input" data-validate="Enter password">
+                    <span class="btn-show-pass">
+                        <i class="zmdi zmdi-eye"></i>
+                    </span>
+                    <input :value="__('Password')" class="input100" type="password" name="password" id="password" required autocomplete="current-password">
+                    @if ($errors->has('password'))
+                        <span class="text-danger">{{ $errors->first('password') }}</span>
+                    @endif
+                    <span class="focus-input100" data-placeholder="Wachtwoord"></span>
+                </div>
 
-    <!-- Remember Me -->
-    <div class="block mt-4">
-        <label for="remember_me" class="inline-flex items-center">
-            <input id="remember_me" type="checkbox" class="rounded dark:bg-gray-900 border-gray-300 dark:border-gray-700 text-indigo-600 shadow-sm focus:ring-indigo-500 dark:focus:ring-indigo-600 dark:focus:ring-offset-gray-800" name="remember">
-            <span class="ml-2 text-sm text-gray-600 dark:text-gray-400">Herinner me</span>
-        </label>
+                <div class="container-login100-form-btn">
+                    <div class="wrap-login100-form-btn">
+                        <div class="login100-form-bgbtn"></div>
+                        <button class="login100-form-btn" type="submit">
+                            Inloggen
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
     </div>
+</div>
 
-    <div class="flex items-center justify-end mt-4">
-        <button class="ml-3">
-            Inloggen
-        </button>
-    </div>
-</form>
+
+<div id="dropDownSelect1"></div>
+
+
+</body>
+</html>

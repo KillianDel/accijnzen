@@ -32,3 +32,18 @@ body{
 footer{
     margin-top: auto;
 }
+
+
+.img-max {
+  max-width: 500px;
+  width:100%;
+  max-height: 500px;
+  height: 100%;
+}
+.img-max-cards {
+  max-width: 375px;
+  width:100%;
+  max-height: 375px;
+  height: 100%;
+}
+

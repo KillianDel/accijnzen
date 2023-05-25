@@ -21,11 +21,11 @@
       <div class="card-columns">
         @foreach ($news as $new)
         <div class="card">
-          <img class="card-img-top" src="{{ asset('media/nieuwsberichten/' . $new->cover_image) }}" alt="accijnzen news">
+          <img class="card-img-top img-max-cards" src="{{ asset('media/nieuwsberichten/' . $new->cover_image) }}" alt="accijnzen news">
             <div class="card-body">
                 <h5 class="card-title">{{ $new->titel }}</h5>
                 <p class="card-text">
-                    {{ $new->content }}
+                  {!! nl2br(e($new->content)) !!}
                 </p>
                 <p class="card-text"><small class="text-muted">{{ $new->created_at->format('d/m/Y') }}</small></p>
             </div>
