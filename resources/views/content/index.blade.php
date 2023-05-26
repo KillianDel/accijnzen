@@ -59,11 +59,11 @@
     </div>
     
     
-    <div class="position-relative overflow-hidden p-1 p-md-5 text-center bg-light">
+    <div class="position-relative overflow-hidden pb-1 p-md-5 text-center bg-light">
         <div class="row align-items-stretch featurette" data-aos="flip-up">
             <div class="col-md-7">
                 <h2 class="featurette-heading font-weight-bold pt-4">Accijnzen nieuws</h2>
-                <br><br>
+                <br>
                 <p class="lead">Ik hou jullie up-to-date over de laatste nieuwtjes over Accijnzen...</p>
                 <p class="lead">Onze laatste accijnzen nieuws <a href="">: <br>{{ $news->titel }}</a></p>
                 <a class="btn btn-secondary" href="{{ route("news") }}">Bekijk onze nieuwtjes</a>
