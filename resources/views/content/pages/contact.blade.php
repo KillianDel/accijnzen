@@ -58,14 +58,26 @@
                     <span class="text-danger">{{ $errors->first('message') }}</span>
                 @endif 
             </div>
+
+            <!-- Google reCaptcha v2 -->
+            <div class="form-group form-floating col-12">
+            {!! htmlFormSnippet() !!}
+            @if($errors->has('g-recaptcha-response'))
+                <small class="text-danger">{{ $errors->first('g-recaptcha-response') }}</small>
+            @endif
+            </div>
+            
             <div class="col-12">
                 <button type="submit" class="btn btn-light ">Versturen</button>
             </div>
-                    @if(Session::has('success'))
-                        <div class="alert alert-success">
-                            {{Session::get('success')}}
-                        </div>
-                    @endif
+
+            <div class="col-12">
+                @if(Session::has('success'))
+                    <div class="alert alert-success">
+                        {{Session::get('success')}}
+                    </div>
+                @endif
+            </div>
         </form>
     </div>
 </div>
@@ -75,7 +87,7 @@
         <div class="col-md-7 d-flex flex-column justify-content-center">
             <h2 class="featurette-heading font-weight-bold pt-4">Over mij</h2>
             <br><br>
-            <p class="lead">Lange tekst</p>
+            <p class="lead">Tom Verhoeven is sinds 1999 tewerkgesteld bij de AAD&A.  Vanaf 2012 iv hij werkzaam op de Dienst Activabeheer (voormalig accijnskantoor).  Daar geeft hij ondersteuning aan interne en externe klanten.</p>
         </div>
         <div class="col-md-5">
             <div class="d-flex justify-content-center align-items-start h-100">

@@ -38,7 +38,7 @@ return [
      * get more info @ https://developers.google.com/recaptcha/docs/versions
      *
      */
-    'version'                      => 'v3',
+    'version'                      => 'v2',
 
     /**
      *
@@ -128,7 +128,7 @@ return [
      * Default 'validation.recaptcha'
      *
      */
-    'error_message_key' => 'validation.recaptcha',
+    'error_message_key' => 'Invalid recaptcha',
 
     /**
      *
