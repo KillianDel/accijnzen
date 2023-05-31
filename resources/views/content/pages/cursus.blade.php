@@ -36,7 +36,7 @@
                     <div class="card-body">
                         <h5 class="text-left card-title">{{ $curs->name }}</h5>
                         <p class="text-left card-text">
-                            {!! nl2br(e($curs->subject)) !!}
+                            {!! $curs->subject !!}
                         </p>
                         <div class="d-flex justify-content-between align-items-center">
                             <p class="m-0"><u>Meer info</u></p>

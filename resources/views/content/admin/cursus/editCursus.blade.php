@@ -50,7 +50,7 @@
           <div class="form-group row">
             <label class="col-sm-2 col-form-label" for="subject" >Onderwerp</label>
             <div class="col-sm-10">
-              <textarea name="subject" @error('subject') is-invalid @enderror class="form-control form-control-lg"  autofocus rows="2" cols="50">{{ $cursus->subject }}</textarea>
+              <textarea name="subject" @error('subject') is-invalid @enderror class="form-control formatted-text form-control-lg"  autofocus rows="2" cols="50">{!! $cursus->subject !!}</textarea>
               @error('subject')
                 <span class="invalid-feedback" role="alert">
                   <strong>{{ $message }}</strong>
@@ -59,16 +59,17 @@
             </div>
           </div>
           <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="description" >Beschrijving</label>
+            <label class="col-sm-2 col-form-label" for="description">Beschrijving</label>
             <div class="col-sm-10">
-              <textarea name="description" @error('description') is-invalid @enderror class="form-control form-control-lg"  autofocus rows="5" cols="70">{{ $cursus->description }}</textarea>
-              @error('description')
+                <textarea name="description" @error('description') is-invalid @enderror class="form-control formatted-text form-control-lg" autofocus rows="5" cols="70">{!! $cursus->description !!}</textarea>
+                @error('description')
                 <span class="invalid-feedback" role="alert">
-                  <strong>{{ $message }}</strong>
+                    <strong>{{ $message }}</strong>
                 </span>
-              @enderror
+                @enderror
             </div>
-          </div>
+        </div>
+
         <div class="text-right">
             <button type="submit" class="btn btn-dark btn-sm">Aanpassen cursus</button>
         </div>

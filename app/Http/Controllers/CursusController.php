@@ -31,7 +31,7 @@ class CursusController extends Controller
             'description' => 'required|max:500',
             'price' => 'required',
             'priority' => 'required|integer',
-            'photo' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
+            'photo' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2500,max_height=2048'
         ]);
         $photo = $request->file('photo');
         $name = $request->input('name');
@@ -95,7 +95,7 @@ class CursusController extends Controller
     public function updatefoto(Request $request, $id)
     {
         $request->validate([
-            'photo' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
+            'photo' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2500,max_height=2048'
         ]);
         $prev_curs = Cursus::where('id', $id)->first();
         $prev_pic = $prev_curs->photo;

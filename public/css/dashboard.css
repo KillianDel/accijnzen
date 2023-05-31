@@ -22,6 +22,10 @@ body {
     height: 16px;
     vertical-align: text-bottom;
   }
+  .formatted-text {
+    white-space: pre-wrap;
+  }
+
   
   /*
    * Sidebar

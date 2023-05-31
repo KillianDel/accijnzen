@@ -29,8 +29,8 @@
       @foreach ($cursus as $curs)
         <tr>
           <td>{{ $curs->name }}</td>
-          <td>{!! nl2br(e($curs->subject)) !!}</td>
-          <td>{!! nl2br(e($curs->description)) !!}</td>
+          <td>{!! $curs->subject !!}</td>
+          <td>{!! $curs->description !!}</td>
           <td>€{{ $curs->price }}</td>
           <td>{{ $curs->priority }}</td>
           <td>

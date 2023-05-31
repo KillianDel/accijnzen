@@ -25,7 +25,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ $new->titel }}</h5>
                 <p class="card-text">
-                  {!! nl2br(e($new->content)) !!}
+                  {!! $new->content !!}
                 </p>
                 <p class="card-text"><small class="text-muted">{{ $new->created_at->format('d/m/Y') }}</small></p>
             </div>

@@ -28,7 +28,7 @@ class NewsController extends Controller
         $request->validate([
             'titel' => 'required|max:100',
             'content' => 'required',
-            'cover_image' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
+            'cover_image' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2500,max_height=2048'
         ]);
         $cover_image = $request->file('cover_image');
         $titel = $request->input('titel');
@@ -75,7 +75,7 @@ class NewsController extends Controller
     public function updatefoto(Request $request, $id)
     {
         $request->validate([
-            'cover_image' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2048,max_height=2048'
+            'cover_image' => 'required|mimes:jpg,png,jpeg|max:10096|dimensions:max_width=2500,max_height=2048'
         ]);
         $prev_post = News::where('id', $id)->first();
         $prev_pic = $prev_post->cover_image;

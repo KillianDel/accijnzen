@@ -26,7 +26,7 @@
       @foreach ($news as $new)
         <tr>
           <td>{{ $new->titel }}</td>
-          <td>{!! nl2br(e($new->content)) !!}</td>
+          <td>{!! $new->content !!}</td>
           <td>
             <div class="btn-group">
               <form action="{{ route('news.edit',$new->id) }}" method="post">
