@@ -1,6 +1,7 @@
 @extends('layouts.master')
 @section('heading')
     <title>Accijnzen - Contact</title>
+    {!! htmlScriptTagJsApi() !!}
 @endsection
 
 @section('content')
