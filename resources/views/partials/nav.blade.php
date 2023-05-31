@@ -26,6 +26,9 @@
               <a class="nav-link {{ request()->is('nieuws') ? 'active' : '' }}" href="{{ route('news') }}">Nieuws</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link {{ request()->is('publicaties') ? 'active' : '' }}" href="{{ route('publicaties') }}">Publicaties</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link {{ request()->is('contact') ? 'active' : '' }}" href="{{ route('contact') }}">Contacteer me</a>
             </li>
           

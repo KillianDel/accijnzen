@@ -1,0 +1,142 @@
+body{
+    background:#eee;
+}
+
+
+.documents {
+    padding:20px;    
+}
+
+.tab-content {
+  background-color: #fff;
+  border: 1px solid #dce2e9;
+  border-radius: 4px;
+  border-top: none;
+  height: 100%;
+  width: 100%
+}
+
+
+.tab-content > .active {
+    display: block;
+  }
+  
+
+@media (max-width: 767px) {
+  .nav-justified > li > a {
+    border: 1px solid #98a3af;
+  }
+
+  .nav-justified + .tab-content {
+    border: 1px solid #dce2e9;
+  }
+}
+
+.document {
+  float: left;
+  width: calc(33% - 20px);
+  max-width: 240px;
+  margin: 0px 10px 20px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #dce2e9;
+  transition: background-color 0.3s ease;
+}
+
+.document:hover {
+  background-color: #f5f5f5;
+}
+
+
+
+
+.document .document-body {
+  height: 130px;
+  text-align: center;
+  border-radius: 3px 3px 0 0;
+  background-color: #fdfdfe;
+}
+
+.document .document-body i {
+  font-size: 45px;
+  line-height: 120px;
+}
+
+.document .document-body img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.document .document-footer {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #ebf1f5;
+  padding: 5px 12px;
+  border-radius: 0 0 2px 2px;
+}
+
+.document .document-footer .document-name {
+  display: block;
+  padding-top: 5px;
+  margin-bottom: 5px;
+  color: #0c0f11;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: normal;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.document .document-footer .document-description {
+  display: block;
+  margin-top: -1px;
+  padding-top: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #4c5963;
+  line-height: normal;
+  overflow-x: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-decoration: none;
+}
+
+.document .document-footer .download-button {
+  margin-top: auto;
+  background-color: #f5f5f5;
+  color: #343f48;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.document .document-footer .download-button:hover {
+  background-color: #dce2e9;
+}
+
+
+.document.info .document-footer >*, .document.success .document-footer >*,
+.document.danger .document-footer >*, .document.warning .document-footer >*,
+.document.dark .document-footer >* {
+  color: #fff;
+}
+
+
+.document.danger .document-footer {
+  background-color: #f95858;
+}
+
+
+@media screen and (max-width: 600px) {
+  .document  {
+    width: 100%;
+    margin: 5px 0;
+    max-width: none;
+  }
+}
+

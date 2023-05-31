@@ -40,11 +40,18 @@
         </a>
       </li>
       <li class="nav-item">
+        <a class="nav-link {{ request()->is('dashboard/publicaties') ? 'active' : '' }}" href="{{ route('publicatie.get') }}">
+          <span data-feather="file-plus"></span>
+          Publicaties
+        </a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link {{ request()->is('dashboard/contact') ? 'active' : '' }}" href="{{ route('contact.dash') }}">
           <span data-feather="message-square"></span>
           Contact
         </a>
       </li>
+      
     
       <li class="nav-item">
         <a class="nav-link" aria-current="page" href="/">

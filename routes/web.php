@@ -5,6 +5,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\PagesController;
 use App\Http\Controllers\CursusController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PublicatiesController;
 use App\Http\Controllers\DashboardController;
 use Illuminate\Support\Facades\Route;
 
@@ -30,6 +31,10 @@ Route::get('/nieuws', [NewsController::class, 'index'])->name('news');
 Route::get('/cursussen', [CursusController::class, 'index'])->name('cursussen');
 Route::get('/cursussen/{id}', [CursusController::class, 'showcursus'])->name('cursus.showmore');
 
+
+Route::get('/publicaties', [PublicatiesController::class, 'index'])->name('publicaties');
+Route::get('/publicaties/{id}', [PublicatiesController::class, 'download'])->name('publicatie.download');
+
 # FORMS
 Route::get('/contact', [ContactController::class, 'get'])->name('contact');
 Route::post('/contact', [ContactController::class, 'store'])->name('contact.post');
@@ -49,6 +54,14 @@ Route::middleware('auth')->group(function () {
     # Profiel bewerken
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    //PUBLICATIES
+    Route::get('/dashboard/publicaties', [PublicatiesController::class, 'get'])->name('publicatie.get');
+    Route::post('/dashboard/publicaties', [PublicatiesController::class, 'upload'])->name('publicatie.store');
+    Route::get('/dashboard/publicaties/edit/{id}', [PublicatiesController::class, 'edit'])->name('publicatie.edit');
+    Route::post('/dashboard/publicaties/update/{id}', [PublicatiesController::class, 'update'])->name('publicatie.update');
+    Route::post('/dashboard/publicaties/delete/{id}', [PublicatiesController::class, 'destroy'])->name('publicatie.delete');
+    
 
     //NEWS
     Route::get('/dashboard/news', [NewsController::class, 'get'])->name('news.get');
