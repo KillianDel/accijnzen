@@ -19,12 +19,12 @@
             
             <div >
                 <label for="name">Naam</label>
-                <input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
+                <input id="name" name="name" type="text" class="mt-1 block w-full" value="{{$user->name}}" required autofocus autocomplete="name" />
             </div>
 
             <div>
                 <label for="email" :value="__('Email')">Email</label>
-                <input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
+                <input id="email" name="email" type="email" class="mt-1 block w-full" value="{{$user->email}}" required autocomplete="username" />
             </div>
 
             <div class="flex items-center gap-4">
