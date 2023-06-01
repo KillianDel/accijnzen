@@ -82,17 +82,17 @@
     </div>
 </div>
 
-<div class="position-relative overflow-hidden p-1 p-md-5 text-center mb-2 mx-2 text-white" style="background-color: #815194">
+<div class="position-relative overflow-hidden p-1 p-md-5 text-white" style="background-color: #815194">
     <div class="row align-items-start featurette" data-aos="flip-up">
-        <div class="col-md-7 d-flex flex-column justify-content-center">
+        <div class="col-md-5">
+            <div class="d-flex justify-content-center align-items-start h-100">
+                <img class="featurette-image img-fluid mx-auto" src="{{ asset('media/index/1.jpg') }}" alt="accijnzen news">
+            </div>
+        </div>
+        <div class="col-md-6">
             <h2 class="featurette-heading font-weight-bold pt-4">Over mij</h2>
             <br><br>
             <p class="lead">Tom Verhoeven is sinds 1999 tewerkgesteld bij de AAD&A.  Vanaf 2012 iv hij werkzaam op de Dienst Activabeheer (voormalig accijnskantoor).  Daar geeft hij ondersteuning aan interne en externe klanten.</p>
-        </div>
-        <div class="col-md-5">
-            <div class="d-flex justify-content-center align-items-start h-100">
-                <img class="featurette-image img-fluid mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/6/63/Icon_Bird_512x512.png" alt="accijnzen news">
-            </div>
         </div>
     </div>
 </div>
