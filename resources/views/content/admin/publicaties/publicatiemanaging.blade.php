@@ -1,4 +1,8 @@
 @extends('layouts.admin')
+@section('heading')
+    <title>Adminmenu - Publicatie</title>
+@endsection
+
 
 
 @section('content')

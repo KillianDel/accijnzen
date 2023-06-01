@@ -1,4 +1,7 @@
 @extends('layouts.admin')
+@section('heading')
+    <title>Adminmenu - Cursus</title>
+@endsection
 
 
 @section('content')
