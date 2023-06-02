@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="position-relative overflow-hidden pb-1  p-md-5 text-white" style="background-color:#815194">
+    <div class="position-relative overflow-hidden pb-1 p-4 p-md-5 text-white" style="background-color:#815194">
         <div class="row align-items-stretch featurette" data-aos="flip-up">
             <div class="col-md-5">
                 <div class="d-flex justify-content-center align-items-stretch h-100">
@@ -43,14 +43,14 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="featurette-heading font-weight-bold">Wat is een accijns en hoe wordt deze berekend?</h2>
+                <h2 class="featurette-heading font-weight-bold pt-3">Wat is een accijns en hoe wordt deze berekend?</h2>
                 <br>
                 <p class="lead">Een accijns is een indirecte belasting op specifieke goederen binnen een land. Het belastingtarief wordt bepaald op basis van de specifieke kenmerken van het product. Accijnzen worden berekend op de hoeveelheid van het product, zoals per volume, per item of per gewicht. Het exacte accijnsbedrag is soms lastig te achterhalen, omdat het meestal niet op de factuur wordt vermeld.</p>
             </div>
         </div>
     </div>
     
-    <div class="position-relative overflow-hidden p-md-5  text-right  bg-light" >
+    <div class="position-relative overflow-hidden p-md-5 p-4 text-right  bg-light" >
         <div class="row align-items-stretch featurette" data-aos="fade-right">
             <div class="col-md-5">
                 <h2 class="featurette-heading">Onze Cursussen</h2>
@@ -73,7 +73,7 @@
     
 
     
-    <div class="position-relative overflow-hidden pb-1  p-md-5 text-white " style="background-color:#815194" >
+    <div class="position-relative overflow-hidden pb-1 p-4  p-md-5 text-white " style="background-color:#815194" >
         <div class="row align-items-stretch featurette" data-aos="flip-up">
         
             <div class="col-md-5">
@@ -82,7 +82,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="featurette-heading font-weight-bold">Soorten accijnzen in België en hun toepassing</h2>
+                <h2 class="featurette-heading font-weight-bold pt-3">Soorten accijnzen in België en hun toepassing</h2>
                 <br>
                 <p class="lead">In België zijn er twee soorten accijnzen: communautaire accijnzen en nationale accijnzen. Communautaire accijnzen worden geheven binnen de Belgisch-Luxemburgse Economische Unie, waarbij opbrengsten verdeeld worden tussen beide landen. Nationale accijnzen zijn exclusief voor België en de opbrengsten blijven binnen het land. Verpakkingsheffing wordt gelijkgesteld aan de accijns.</p>
             </div>
@@ -91,14 +91,14 @@
     </div>
 
 
-    <div class="position-relative overflow-hidden pb-1 p-md-5 text-right  bg-light" >
+    <div class="position-relative overflow-hidden pb-1 p-4 p-md-5 text-right  bg-light" >
         <div class="row align-items-stretch featurette" data-aos="flip-up">
             <div class="col-md-5 ">
                 <h2 class="featurette-heading font-weight-bold pt-4">Accijnzen nieuws</h2>
                 <br>
                 <p class="lead">Ik hou jullie up-to-date over de laatste nieuwtjes over Accijnzen...</p>
                 <p class="lead">Onze laatste accijnzen nieuws: <a href=""><br>{{ $news->titel }}</a></p>
-                <a class="btn btn-outline-dark" href="{{ route("news") }}">Bekijk onze nieuwtjes</a>
+                <a class="btn btn-outline-dark mb-4" href="{{ route("news") }}">Bekijk onze nieuwtjes</a>
             </div>
             <div class="col-md-5">
                 <div class="d-flex justify-content-center align-items-stretch h-100">
@@ -109,7 +109,7 @@
     </div>
     
     
-    <div class="position-relative overflow-hidden pb-1  p-md-5 text-white " style="background-color:#815194" >
+    <div class="position-relative overflow-hidden pb-1  p-md-5 p-4 text-white " style="background-color:#815194" >
         <div class="row align-items-stretch featurette" data-aos="flip-up">
             <div class="col-md-5">
                 <div class="d-flex justify-content-center align-items-stretch h-100">
@@ -117,7 +117,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <h2 class="featurette-heading font-weight-bold">Europese en nationale regels met betrekking tot accijnzen</h2>
+                <h2 class="featurette-heading font-weight-bold pt-3">Europese en nationale regels met betrekking tot accijnzen</h2>
                 <br>
                 <p class="lead">Accijnzen vallen onder Europese regelgeving, maar lidstaten kunnen ook andere producten belasten. In België geldt een aparte regeling voor binnenlandse accijnzen, los van Europese wetgeving. Communautaire accijnsgoederen zoals energieproducten, elektriciteit, alcohol en tabak zijn geharmoniseerd op Europees niveau. Lidstaten kunnen echter hun eigen tarieven vaststellen. Nationale accijnsproducten in België omvatten alcoholvrije dranken en koffie, die onder nationale wetgeving vallen.</p>
             </div>

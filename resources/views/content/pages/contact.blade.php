@@ -82,7 +82,7 @@
     </div>
 </div>
 
-<div class="position-relative overflow-hidden p-1 p-md-5 text-white" style="background-color: #815194">
+<div class="position-relative overflow-hidden p-4 p-md-5 text-white" style="background-color: #815194">
     <div class="row align-items-start featurette" data-aos="flip-up">
         <div class="col-md-5">
             <div class="d-flex justify-content-center align-items-start h-100">

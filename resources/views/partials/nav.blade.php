@@ -5,7 +5,7 @@
       <div class="container-fluid">
   
           <!-- LOGO -->
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{ route('index') }}">
           <img src="{{ asset('media/logo.png') }}" alt="Accijnzen" width="80" height="80">
         </a>
         
